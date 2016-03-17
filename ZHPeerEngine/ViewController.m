@@ -5,6 +5,7 @@
 //  Created by Zakk Hoyt on 3/16/16.
 //  Copyright © 2016 Zakk Hoyt. All rights reserved.
 //
+//  Following tutorial from: http://code.tutsplus.com/tutorials/creating-a-game-with-bonjour-client-and-server-setup--mobile-16233
 
 #import "ViewController.h"
 #import "HostViewController.h"
