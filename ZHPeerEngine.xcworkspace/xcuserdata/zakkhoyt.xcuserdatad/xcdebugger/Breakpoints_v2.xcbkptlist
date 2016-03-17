@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZHPeerEngine/JoinViewController.m"
-            timestampString = "479889495.34763"
+            filePath = "ZHPeerEngine/HostViewController.m"
+            timestampString = "479889953.553803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-viewWillDisappear:"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-socketDidDisconnect:withError:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ZHPeerEngine/HostViewController.m"
-            timestampString = "479889577.374547"
+            timestampString = "479889971.847943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-socketDidDisconnect:withError:"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-socket:didReadData:withTag:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZHPeerEngine/JoinViewController.m"
+            timestampString = "479890115.508302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-stopBrowsing"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

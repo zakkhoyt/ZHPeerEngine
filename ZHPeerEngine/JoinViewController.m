@@ -183,10 +183,9 @@
     if ([self connectWithService:service]) {
         NSLog(@"Did Connect with Service: domain(%@) type(%@) name(%@) port(%i)", [service domain], [service type], [service name], (int)[service port]);
 
-        NSString *message = @"Hello server!";
-        NSData *payload = [message dataUsingEncoding:NSUTF8StringEncoding];
-
-        [self.socket writeData:payload withTimeout:5 tag:0];
+        //        NSString *message = @"Hello server!";
+        //        NSData *payload = [message dataUsingEncoding:NSUTF8StringEncoding];
+        //        [self.socket writeData:payload withTimeout:5 tag:0];
     } else {
         NSLog(@"Unable to Connect with Service: domain(%@) type(%@) name(%@) port(%i)", [service domain], [service type], [service name], (int)[service port]);
     }
@@ -206,6 +205,10 @@
 
     [socket setDelegate:nil];
     [self setSocket:nil];
+
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Socket diconnected" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:ac animated:YES completion:nil];
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {

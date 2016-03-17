@@ -73,6 +73,11 @@
     NSLog(@"Failed to Publish Service: domain(%@) type(%@) name(%@) - %@", [service domain], [service type], [service name], errorDict);
 }
 
+- (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
+    NSString *message = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"Did read data: %@ with tag: %ld", message, tag);
+}
+
 #pragma mark GCDAsyncSocketDelegate
 
 - (void)socket:(GCDAsyncSocket *)socket didAcceptNewSocket:(GCDAsyncSocket *)newSocket {
@@ -92,5 +97,9 @@
         [self.socket setDelegate:nil];
         [self setSocket:nil];
     }
+    
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"Socket diconnected" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [ac addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:ac animated:YES completion:nil];
 }
 @end
